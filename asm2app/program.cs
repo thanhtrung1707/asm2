@@ -12,9 +12,10 @@ namespace asm2app
 		{
            
 			Batch batch = new Batch("Trung");
+            int l = 0;
            
             
-            while (1 > 0)
+            while (l==0)
 			{
 				UI.ShowMenuControl();
                 int option = UI.EnterOption();
@@ -38,8 +39,8 @@ namespace asm2app
                         break;
                     case 3:
                         UI.ShowMenuEdit();
-                        var tinhnang = UI.Enter();
-                        switch (tinhnang)
+                        var feature = UI.Enter();
+                        switch (feature)
                         {
                             case 1:
                                 batch.Add(new Custemurs(UI.EnterCustemursId(), UI.EnterCustemursFullName(), UI.EnterCustemursAge(), UI.EnterCustemursTotalOrder(), UI.EnterCustemursTotalMoney()));
@@ -65,14 +66,14 @@ namespace asm2app
                         }
                         break;
                     case 4:
-                        batch.ShowAllCustemurs();
+                        l = 1;
+                        Console.WriteLine("You have out Programs");
                         break;
+                       
 
                 }
-
-                Console.ReadLine();
             }
         }
-    }
+    
 }
 
