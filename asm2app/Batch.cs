@@ -9,22 +9,23 @@ namespace asm2app
 	class Batch
 	{
 		public string Name;
+		public string Id;
+		public int Age;
+		public int TotalOrder;
+		public int TotalMoney;
 		public List<Custemurs> Custemurs;
 
-		public Batch()
-		{
-			Name = "N/A";
-		}
 
 		public Batch(string name)
 		{
 			Name = name;
-            Custemurs = new List<Custemurs>();
+			Custemurs = new List<Custemurs>();
 		}
 
 		public Custemurs FindCustemursById(string id)
 		{
 			return Custemurs.SingleOrDefault(s => s.Id.Equals(id));
+
 		}
 
 		public bool Add(Custemurs custemurs)
@@ -48,16 +49,29 @@ namespace asm2app
 			return true;
 		}
 
-		public bool EditCustemursById(string id, string fullName, int age)
+		public bool EditCustemursById(string id, string fullName, int age, int totalOrder, int totalMoney)
 		{
 			var custemursInBatch = FindCustemursById(id);
 
 			if (custemursInBatch == null) return false;
-
+			custemursInBatch.Id = id;
 			custemursInBatch.FullName = fullName;
 			custemursInBatch.Age = age;
+			custemursInBatch.TotalOrder = totalOrder;
+			custemursInBatch.TotalMoney = totalMoney;
+
 
 			return true;
+		}
+
+		public void ShowAllCustemurs()
+		{
+			Console.WriteLine($"Batch: {Name}");
+			Console.WriteLine("---------");
+			foreach (var Custemurs in Custemurs)
+            {
+				Custemurs.ShowInfo();
+            }
 		}
 	}
 }

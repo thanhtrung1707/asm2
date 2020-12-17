@@ -8,15 +8,33 @@ namespace asm2app
 {
 	class UI
 	{
-		
-		
+
+
 
 		public static void ShowBatchInfo(Batch batch)
+
 		{
-			Console.WriteLine($"Batch name: {batch.Name}");
-			Console.WriteLine($"Number students in batch: {batch.Custemurs.Count} student");
-			Console.WriteLine("========");
+			List<Custemurs> ListCustemurs = new List<Custemurs>();
+			//int NumberCustemurs;
+
+			//Console.WriteLine("Enter number custemurs");
+
+
+			//NumberCustemurs = int.Parse(Console.ReadLine());
+			//for (int i = 0; i < NumberCustemurs; i++)
+			//{
+			//	Console.WriteLine("Enter information custemurs the  {0}", (i + 1));
+			//	string Id = UI.EnterCustemursId();
+			//	string fullName = UI.EnterCustemursFullName();
+			//	int age = UI.EnterCustemursAge();
+			//	int totalOrder = UI.EnterCustemursTotalOrder();
+			//	int totalMoney = UI.EnterCustemursTotalMoney();
+			//	Console.WriteLine($"Batch name: {batch.Name}");
+			//	Console.WriteLine($"Number custemurs in batch: {batch.Custemurs.Count} custemurs");
+			//}
+
 		}
+
 
 		public static string EnterCustemursId()
 		{
@@ -34,26 +52,26 @@ namespace asm2app
 			return int.Parse(Console.ReadLine());
 		}
 		public static int EnterCustemursTotalOrder()
-        {
+		{
 			Console.WriteLine("Please enter custemurs total order");
 
-                return int.Parse(Console.ReadLine());
-        }
+			return int.Parse(Console.ReadLine());
+		}
 		public static int EnterCustemursTotalMoney()
-        {
+		{
 			Console.WriteLine("Please enter custermurs total Money");
 			return int.Parse(Console.ReadLine());
-        }
+		}
 		public static void ShowMenuControl()
 		{
 			Console.WriteLine("Please choose your command control below");
-			Console.WriteLine("1. View infomation Custemurs");
+			Console.WriteLine("1. Add Custemurs");
 			Console.WriteLine("2. Find Custemurs by Id");
 			Console.WriteLine("3. Edit Custemurs ");
 			Console.WriteLine("4. Exit");
 		}
 
-		
+
 		public static int EnterOption()
 		{
 			Console.Write("Enter your option:");
@@ -66,12 +84,20 @@ namespace asm2app
 			Console.WriteLine("2. edit");
 			Console.WriteLine("3. Delete");
 		}
+
+		public static void ShowCustemursInfo(Custemurs custemurs)
+		{
+			custemurs.ShowInfo();
+			Console.WriteLine("---------");
+		}
+
 		public static int Enter()
-        {
+		{
 			Console.WriteLine("Enter tinh nang");
 			return int.Parse(Console.ReadLine());
-        }
-		
-	
+		}
+
+
 	}
 }
+

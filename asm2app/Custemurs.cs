@@ -11,19 +11,18 @@ namespace asm2app
 		public string Id;
 		public string FullName;
 		public int Age;
+		public int TotalOrder;
+		public int TotalMoney;
 
-		public Custemurs()
-		{
-			Id = "N/A";
-			FullName = "N/A";
-			Age = -1;
-		}
-
-		public Custemurs(string id, string fullName, int age)
+		
+		 
+		public Custemurs(string id, string fullName, int age, int totalOrder, int totalMoney)
 		{
 			Id = id;
 			FullName = fullName;
 			Age = age;
+			TotalOrder = totalOrder;
+			TotalMoney = totalMoney;
 		}
 
 		public void ShowInfo()
@@ -31,6 +30,8 @@ namespace asm2app
 			Console.WriteLine($"Id: {Id}");
 			Console.WriteLine($"Full Name: {FullName}");
 			Console.WriteLine($"Age: {Age}");
+			Console.WriteLine($" TotalOrder: {TotalOrder}");
+			Console.WriteLine($"TotalMoney: {TotalMoney}");
 		}
 	}
 }

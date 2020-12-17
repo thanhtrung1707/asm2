@@ -5,3 +5,10 @@ C:\Users\Admin\source\repos\asm2app\asm2app\obj\Debug\asm2app.csprojAssemblyRefe
 C:\Users\Admin\source\repos\asm2app\asm2app\obj\Debug\asm2app.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\asm2app\asm2app\obj\Debug\asm2app.exe
 C:\Users\Admin\source\repos\asm2app\asm2app\obj\Debug\asm2app.pdb
+C:\Users\Admin\Desktop\asm2app\asm2app\bin\Debug\asm2app.exe.config
+C:\Users\Admin\Desktop\asm2app\asm2app\bin\Debug\asm2app.exe
+C:\Users\Admin\Desktop\asm2app\asm2app\bin\Debug\asm2app.pdb
+C:\Users\Admin\Desktop\asm2app\asm2app\obj\Debug\asm2app.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\asm2app\asm2app\obj\Debug\asm2app.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\asm2app\asm2app\obj\Debug\asm2app.exe
+C:\Users\Admin\Desktop\asm2app\asm2app\obj\Debug\asm2app.pdb
